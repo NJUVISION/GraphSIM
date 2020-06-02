@@ -1,25 +1,20 @@
-## Welcome to GitHub Pages
+## Inferring Point Cloud Quality via Graph Similarity
 
-You can use the [editor on GitHub](https://github.com/NJUVISION/GraphSIM/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+# Abstract: 
+Objective quality estimation of media content plays a vital role in vast applications. Though numerous metrics have been successfully devised for 2D image or video, it still lacks of a counterpart for emerging 3D point clouds with unstructured and sparsely distributed points. We propose the GraphSIM – an objective metric to accurately predict the subjective quality of point cloud with superimposed geometry and color impairments. Motivated by the facts that human vision system is more sensitive to the high spatial-frequency components (e.g., contours, edges), and weighs more to the local structural variations rather individual point intensity, we first extract geometric keypoints by resampling the reference point cloud geometry information to form the object skeleton; we then construct local graphs centered at these keypoints for both reference and distorted point clouds, followed by collectively aggregating color gradient moments (e.g., zeroth, first, and second) that are derived between all other points and centered keypoint in the same local graph for significant feature similarity (a.k.a., local significance) measurement; Final similarity index is obtained by pooling the local graph significance across all color channels and by averaging across all graphs. Our GraphSIM is validated using two large and independent point cloud assessment datasets that involve a wide range of impairments (e.g., re-sampling, compression, additive noise), reliably demonstrating the state-of-the-art performance for all distortions with noticeable gains in predicting the subjective mean opinion score (MOS), compared with those point-wise distance-based metrics adopted in standardization reference software. Ablation studies have further shown that GraphSIM is generalized to various scenarios with consistent performance by examining its key modules and parameters. Models and associated materials will be made to public at https://njuvision.github.io/GraphSIM or http://smt.sjtu.edu.cn/papers/GraphSIM.
 
 ### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+1. Resampling generation 
 
 ```markdown
-Syntax highlighted code block
+Demo_fast_make.m
 
-# Header 1
-## Header 2
-### Header 3
+### Markdown
+2. GraphSIM
+```markdown
+GraphSIM.m
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
 
 **Bold** and _Italic_ and `Code` text
 
