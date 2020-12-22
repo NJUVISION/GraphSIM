@@ -4,7 +4,7 @@ function [LMN_mg, LMN_mug]=colorgradient_mg_mug(G_g,pointset,center)
         pointset_color=pointset_color/255;
         [L,M,N]=RGB2LMN_graph(pointset_color);
         pointset_color_lmn=[L,M,N];
-        w=G_g.W;
+        w=sqrt(G_g.W);
         index_center=find(ismember(pointset(:,1:3),center(1,1:3),'rows')==1); 
         number=0;
         for color_idex=1:1:size(w,2)
