@@ -1,7 +1,7 @@
 function LMN_cg=colorgradient_cg(G_g,G_gd,center,pointset,pointsetd)
 
-     wr=G_g.W;
-     wd=G_gd.W;
+     wr=sqrt(G_g.W);
+     wd=sqrt(G_gd.W);
      index_center1=find(ismember(pointset(:,1:3),center(1,1:3),'rows')==1); 
      index_center2=find(ismember(pointsetd(:,1:3),center(1,1:3),'rows')==1); 
      pointset1=pointset((full(wr(index_center1,:))~=0),:);
